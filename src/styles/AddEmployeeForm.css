@@ -1,0 +1,31 @@
+.add-employee-form {
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #f7f7f7;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+
+.add-employee-form div {
+	margin-bottom: 15px;
+}
+
+.add-employee-form label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.add-employee-form input,
+.add-employee-form select {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.add-employee-form button {
+	display: inline-block;
+	width: 100%;
+}
