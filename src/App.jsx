@@ -9,6 +9,7 @@ const App = () => {
 	const [filteredEmployees, setFilteredEmployees] = useState([]);
 	const [selectedDepartment, setSelectedDepartment] = useState("");
 	const [showAddForm, setShowAddForm] = useState(false);
+	const [loading,setLoading] = useState(true)
 
 	// Fetch employees on component mount
 	useEffect(() => {
@@ -23,8 +24,10 @@ const App = () => {
 			);
 			setEmployees(response.data);
 			setFilteredEmployees(response.data);
+			setLoading(false)
 		} catch (error) {
 			console.error("Error fetching employees:", error);
+			setLoading(false)
 		}
 	};
 
@@ -68,6 +71,7 @@ const App = () => {
 			setFilteredEmployees(filtered);
 		}
 	};
+	if(loading) return <h1>Loading...</h1>
 
 	return (
 		<div className="App">
